@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1b1b1b;
+    color: white;
+}
+
+main{
+  padding-top: 50px;
+}
+
+
+.container{
+    margin: 2% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elementos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50%;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.result {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 1px rgb(255, 255, 255);
+    justify-content: center;
+    cursor: default;
+    text-align: center;
+}
+
+.result2 {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 1px rgb(255, 255, 255);
+    justify-content: space-evenly;
+    cursor: default;
+}
+
+.botaos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+}
+
+.separador{
+    width: 70%;
+}
+
+.option {
+    width: 20%;
+    height: 60px;
+    margin-right: 15px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    background-size: cover; /* Ajusta a imagem ao tamanho do quadrado */
+  }
+
+  .option input[type="radio"] {
+    display: none; /* Esconde o radio button padrão */
+    transition: 0.3s;
+  }
+  
+  .option input[type="radio"]:checked + label{
+    border: 2px solid blue; /* Destaca a opção selecionada */
+  }
+  
+  /* Estilo para cada imagem */
+  #img1 + label {
+    background-image: url('caminho/para/imagem1.jpg');
+  }
+  
+  #img2 + label {
+    background-image: url('caminho/para/imagem2.png');
+  }
+  
+  #img3 + label {
+    background-image: url('caminho/para/imagem3.gif');
+  }
+
+
+label{
+    color: #d10000;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 12px; 
+    box-sizing: border-box;
+    border-width: 2px;  
+    border-style: solid;
+    border-color: #ccc;
+    transition: border-color 0.3s ease; 
+  }
+  
+  input[type="number"]:focus {
+    outline: none; 
+    border-color: #af0909; 
+  }
+  
+button {
+    font-weight: bold;
+    background-color: #af0909; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 200px;
+    transition: 0.4s;
+  }
+  
+  button:hover {
+    background-color: #b00000; 
+    transform: scale(1.2);
+  }
+
+.option{
+  background-color: rgb(75, 75, 75);
+}
+
+.option img{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
