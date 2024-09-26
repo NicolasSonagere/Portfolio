@@ -127,7 +127,7 @@ header{
 
 .semi_block{
     margin-top: 5%;
-    width: 25%;
+    width: 30%;
     height: 400px;
     background-color: rgb(53, 53, 53);
     display: flex;
@@ -196,9 +196,29 @@ header{
 
 .atividade{
     margin: 50px 0;
-    background-color: white;
+    background-color: #383434;
     width: 45%;
-    height: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+    align-items: flex-start;
+    padding: 5%;
+    text-decoration: none;
+}
+
+.atividade h1{
+    color: #ff0000a6;
+}
+
+.imagem_projeto{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.imagem_projeto img{
+    width: 100%;
+    height: auto;
 }
 
 .contato {

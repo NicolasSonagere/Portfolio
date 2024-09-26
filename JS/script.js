@@ -33,3 +33,4 @@ link4.addEventListener('click', (event) => {
     const section = document.getElementById('contato');
     section.scrollIntoView({ behavior: 'smooth' });
 });
+
