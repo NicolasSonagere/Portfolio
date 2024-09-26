@@ -205,10 +205,18 @@ header{
     align-items: flex-start;
     padding: 5%;
     text-decoration: none;
+    transition: 0.6s;
 }
 
 .atividade h1{
     color: #ff0000a6;
+}
+
+.atividade:hover{
+    transform: scale(1.07);
+    h1{
+        color: white;
+    }
 }
 
 .imagem_projeto{
