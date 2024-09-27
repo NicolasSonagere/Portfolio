@@ -166,7 +166,7 @@ header{
     align-items: center;
 }
 
-.header_projects button{
+.header_projects a{
     background-color: #ff0000a6;
     color: white;
     font-size: 10px;
@@ -180,9 +180,10 @@ header{
     text-overflow: ellipsis;
     flex-shrink: 0;
     overflow: hidden;
+    text-decoration: none;
 }
 
-.header_projects button:hover{
+.header_projects a:hover{
     cursor: pointer;
     background-color: white;
     color: black;
