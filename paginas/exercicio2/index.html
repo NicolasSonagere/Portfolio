@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS concepts</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="itenscabeca">
+            <a class="logo" href="../../index.html">
+                <img src="../../images/logo.png" alt=""><p>Nicolas Sonagere</p>
+            </a>
+            <div class="itens_menu">
+                <a href="../../index.html#sobre">About me</a>
+                <a href="../../index.html#skills">Skills</a>
+                <a href="../../index.html#projetos">Projects</a>
+                <a href="../../index.html#contato">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 style="margin-bottom: 20px;">CURSOS EM TECNOLOGIA</h1>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="elementos">
+                    <img src="images/css.png" alt="Curso css">
+                    <h3>Curso em CSS</h3>
+                    <div class="quantidade">
+                        <button onclick="decrementa(this)">-</button>
+                        <input type="number" id="quantidade1" value="0" min="0">
+                        <button onclick="acrescenta (this)">+</button>
+                    </div>
+                    <div class="total">Total: R$ <span id="total1">0</span></div>
+                </div>
+
+                <div class="elementos">
+                    <img src="images/html.png" alt="Curso html">
+                    <h3>Curso em HTML</h3>
+                    <div class="quantidade">
+                        <button onclick="decrementa(this)">-</button>
+                        <input type="number" id="quantidade2" value="0" min="0">
+                        <button onclick="acrescenta (this)">+</button>
+                    </div>
+                    <div class="total">Total: R$ <span id="total2">0</span></div>
+                </div>
+                
+                <div class="elementos">
+                    <img src="images/js.png" alt="Curso JS">
+                    <h3>Curso em JS</h3>
+                    <div class="quantidade">
+                        <button onclick="decrementa(this)">-</button>
+                        <input type="number" id="quantidade3" value="0" min="0">
+                        <button onclick="acrescenta (this)">+</button>
+                    </div>
+                    <div class="total">Total: R$ <span id="total3">0</span></div>
+                </div>
+            </div>
+            <div class="checkout">
+                <h2>Resumo do Pedido</h2>
+                <div class="item">Valor Total dos Produtos: <span id="quantidadeProdutos">0</span></div>
+                <div class="item">Valor a Pagar: R$ <span id="valorAPagar">0</span></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function acrescenta(button) {
+            let input = button.previousElementSibling;
+            let quantidade = parseInt(input.value);
+            input.value = quantidade + 1;
+            updateTotal(input);
+            // Chamar quando for fazer o resumo do pedido
+            updateCheckout();
+        }
+
+        function decrementa(button) {
+            let input = button.nextElementSibling;
+            let quantidade = parseInt(input.value);
+            if (quantidade > 0) {
+                input.value = quantidade - 1;
+                updateTotal(input);
+                // Chamar quando for fazer o resumo do pedido
+                updateCheckout();
+            }
+        }
+
+        function updateTotal(input) {
+            let quantidade = parseInt(input.value);
+            let preco = 10;
+            let total = quantidade * preco;
+            let totalSpan = input.parentElement.nextElementSibling.querySelector('span');
+            totalSpan.textContent = total;
+        }
+
+        function updateCheckout() {
+            let totalProdutos = 0;
+
+            let total1 = parseInt(document.getElementById('total1').textContent);
+            let total2 = parseInt(document.getElementById('total2').textContent);
+            let total3 = parseInt(document.getElementById('total3').textContent);
+            totalProdutos = total1 + total2 + total3;
+
+            let quantidadeProdutos = 0;
+            let quantidade1 = parseInt(document.getElementById('quantidade1').value); // Usar 'value' aqui, pois o input tem value
+            let quantidade2 = parseInt(document.getElementById('quantidade2').value);
+            let quantidade3 = parseInt(document.getElementById('quantidade3').value);
+            quantidadeProdutos = quantidade1 + quantidade2 + quantidade3;
+
+            document.getElementById('quantidadeProdutos').textContent = quantidadeProdutos;
+            document.getElementById('valorAPagar').textContent = totalProdutos; // Por enquanto, o valor a pagar é igual ao total dos produtos
+
+            // Chamada inicial para atualizar o checkout
+            updateCheckout();
+        }
+    </script>
+</body>
+</html>

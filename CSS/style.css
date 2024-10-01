@@ -36,6 +36,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo img{
@@ -64,7 +65,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 8% 12%;
+    margin: 5% 20%;
 }
 
 .footage{
@@ -149,7 +150,7 @@ header{
 
 .semi_block:hover{
     background-color: #ff0000a6;
-    margin-top: 10px;
+    transform: translateY(-20px);
     border-radius: 10px;
     box-shadow: -1px 1px 3px 0px black;
 }
